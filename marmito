@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restaurante • Apresentação</title>
+  <meta name="description" content="Restaurante — sabores caseiros, ambiente aconchegante. Faça seu pedido: (14) 99617-0789" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Restaurante • Apresentação" />
+  <meta property="og:description" content="Sabores caseiros, cardápio do dia e contato rápido: (14) 99617-0789" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --orange-600: #ff7a2d;     /* cor laranja principal */
+      --orange-400: #ff9a58;
+      --nude-50: #fff6f2;       /* nude bem claro / fundo */
+      --nude-100: #fcf3ef;
+      --text-900: #1f2933;
+      --muted: #6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--nude-50), #fff);
+      color:var(--text-900);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:28px;
+    }
+
+    /* Header / Nav */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:52px;height:52px;border-radius:12px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--orange-600),var(--orange-400));
+      color:white;font-weight:700;font-size:20px;
+      box-shadow:0 6px 18px rgba(255,122,45,0.16);
+    }
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{
+      background:var(--orange-600);
+      color:white;padding:10px 14px;border-radius:12px;text-decoration:none;
+      box-shadow:0 6px 18px rgba(255,122,45,0.12);
+      font-weight:700;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+      border-radius: var(--radius);
+      padding:32px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+      align-items:center;
+    }
+    .hero h1{
+      margin:0 0 12px 0;
+      font-size: clamp(22px, 3.6vw, 36px);
+      letter-spacing:-0.02em;
+    }
+    .hero p{margin:0 0 18px 0;color:var(--muted)}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .card-contact{
+      background:linear-gradient(180deg,var(--nude-100),white);
+      border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(31,41,51,0.06);
+      display:flex;flex-direction:column;gap:12px;align-items:flex-start;
+    }
+    .phone{
+      display:flex;gap:10px;align-items:center;font-weight:700;color:var(--text-900);
+    }
+    .phone small{display:block;color:var(--muted);font-weight:500}
+    .sublink{
+      display:inline-flex;align-items:center;gap:8px;background:var(--orange-400);color:#fff;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:700;
+    }
+
+    /* Sections */
+    section{margin-top:22px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+    .box{
+      background: white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(31,41,51,0.04);
+    }
+
+    /* sample menu */
+    .menu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+    .menu-item{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .dish{font-weight:600}
+    .price{color:var(--muted);font-weight:700}
+
+    footer{
+      margin-top:28px;padding:24px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--muted)
+    }
+
+    /* Responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small touches */
+    .badge{
+      background: linear-gradient(90deg,#fff6f0,rgba(255,255,255,0.5));
+      color:var(--orange-600);padding:6px 10px;border-radius:999px;font-weight:700;border:1px solid rgba(255,122,45,0.06)
+    }
+
+    a:focus{outline:3px solid rgba(255,122,45,0.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <a class="brand" href="#top" aria-label="Ir para o topo">
+        <div class="logo" aria-hidden="true">R</div>
+        <div>
+          <div style="font-weight:700">Restaurante</div>
+          <div style="font-size:12px;color:var(--muted)">Sabores que abraçam</div>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <a class="cta" href="tel:+5514996170789">Ligue: (14) 99617-0789</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div>
+          <span class="badge">Aberto hoje • Atendimento rápido</span>
+          <h1 id="hero-title">Bem-vindo ao Restaurante — comida caseira com carinho</h1>
+          <p>Pratos preparados diariamente com ingredientes frescos. Venha experimentar nosso cardápio do dia ou peça pelo WhatsApp.</p>
+
+          <div class="actions">
+            <a class="sublink" href="tel:+5514996170789" aria-label="Ligar para (14) 99617-0789">📞 (14) 99617-0789</a>
+            <a class="sublink" href="https://wa.me/5514996170789?text=Ol%C3%A1%2C+gostaria+de+fazer+um+pedido" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          </div>
+
+        </div>
+
+        <aside class="card-contact" aria-label="Informações de contato">
+          <div>
+            <strong>Faça seu pedido</strong>
+            <div class="phone" style="margin-top:6px">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.92V21a1 1 0 0 1-1.08 1 19 19 0 0 1-8.63-3.02 19 19 0 0 1-6-6A19 19 0 0 1 2 3.08 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .76c.12.86.32 1.7.6 2.5a1 1 0 0 1-.22 1.02L7.91 8.91a14 14 0 0 0 6 6l1.63-1.63a1 1 0 0 1 1.02-.22c.8.28 1.64.48 2.5.6a1 1 0 0 1 .76 1V21z" fill="currentColor"/>
+              </svg>
+              <div>
+                <div>(14) 99617-0789</div>
+                <small>Ligue ou envie mensagem no WhatsApp</small>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:6px">
+            <strong>Horário</strong>
+            <div style="color:var(--muted);margin-top:6px">Seg — Sex: 11:00 — 14:30 • Sab: 11:00 — 15:00</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="sobre" aria-labelledby="sobre-title">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <h2 id="sobre-title" style="margin:8px 0 0 0">Sobre nós</h2>
+          <p style="margin:8px 0 0 0;color:var(--muted)">Tradição, ingredientes frescos e aquele tempero caseiro que conquista famílias.</p>
+        </div>
+
+        <div class="grid" style="margin-top:12px">
+          <div class="box">
+            <h3 style="margin-top:0">Nossa cozinha</h3>
+            <p style="color:var(--muted);margin:8px 0 0 0">Receitas feitas com cuidado — pratos do dia, opções executivas e sobremesas caseiras.</p>
+          </div>
+
+          <div class="box">
+            <h3 style="margin-top:0">Compromisso</h3>
+            <p style="color:var(--muted);margin:8px 0 0 0">Atendimento rápido, higiene e respeito aos clientes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cardapio" aria-labelledby="cardapio-title">
+        <h2 id="cardapio-title" style="margin:14px 0 8px 0">Cardápio (exemplo)</h2>
+        <div class="box">
+          <ul class="menu-list" aria-label="Lista de pratos">
+            <li class="menu-item">
+              <div class="dish">Prato Executivo — Frango grelhado, arroz e salada</div>
+              <div class="price">R$ 24,90</div>
+            </li>
+            <li class="menu-item">
+              <div class="dish">Bife acebolado, purê e legumes</div>
+              <div class="price">R$ 28,90</div>
+            </li>
+            <li class="menu-item">
+              <div class="dish">Lasanha caseira (individual)</div>
+              <div class="price">R$ 22,50</div>
+            </li>
+            <li class="menu-item">
+              <div class="dish">Sobremesa do dia</div>
+              <div class="price">R$ 8,50</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contato" aria-labelledby="contato-title" style="margin-bottom:6px">
+        <h2 id="contato-title" style="margin:14px 0 8px 0">Contato</h2>
+        <div class="grid">
+          <div class="box">
+            <strong>Telefone</strong>
+            <div style="margin-top:8px"><a href="tel:+5514996170789" style="text-decoration:none;color:var(--text-900)">(14) 99617-0789</a></div>
+            <div style="margin-top:8px;color:var(--muted)">Clique para ligar</div>
+          </div>
+
+          <div class="box">
+            <strong>WhatsApp</strong>
+            <div style="margin-top:8px">
+              <a href="https://wa.me/5514996170789?text=Ol%C3%A1%2C+gostaria+de+fazer+um+pedido" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--text-900)">
+                Abrir conversa no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <strong>Restaurante</strong> — Todos os direitos reservados</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div style="font-size:13px;color:var(--muted)">Feito para apresentação • (14) 99617-0789</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
